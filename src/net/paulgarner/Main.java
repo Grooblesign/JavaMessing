@@ -17,7 +17,7 @@ public class Main {
         // 1 1 2 3 5
         int x = 0;
         int y = 1;
-        for (int z=0; z<=10; z++) {
+        for (int i=0; i<=10; i++) {
             int sum = x + y;
             series.add(sum);
             x = y;

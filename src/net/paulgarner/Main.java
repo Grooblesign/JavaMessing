@@ -8,10 +8,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String test = "Hello";
-
-        System.out.println(test.length() + Math.PI);
-
         List<Integer> series = new ArrayList<>();
 
         // 1 1 2 3 5

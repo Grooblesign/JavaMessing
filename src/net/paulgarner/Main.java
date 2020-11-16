@@ -2,25 +2,20 @@ package net.paulgarner;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Main {
 
     public static void main(String[] args) {
 
         List<Integer> series = new ArrayList<>();
+        series.add(1);
+        series.add(1);
 
         // 1 1 2 3 5
-        int x = 0;
-        int y = 1;
-        for (int i=0; i<=10; i++) {
-            int sum = x + y;
-            series.add(sum);
-            x = y;
-            y = sum;
+        while (series.size() < 12) {
+            series.add(series.get(series.size() - 1) + series.get(series.size() - 2));
         }
 
-        series.stream().map(Math::sqrt).collect(Collectors.toList())
-                .forEach(System.out::println);
+        series.forEach(i -> System.out.print(i + " "));
     }
 }
